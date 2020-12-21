@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title>Salzburg Interactive</title>
+  <meta charset="utf-8">
+  <meta name="description" content="website description" />
+  <meta name="keywords" content="website keywords, website keywords" />
+  <meta http-equiv="content-type" content="text/html; charset=windows-1252" />
+  <meta name="viewport" content="width=device-width, 
+    initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" type="text/css" href="style/style.css" />
+  <link rel="stylesheet" type="text/css" href="style/leaflet.css" />
+  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+  <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+  <script src="js/leaflet-src.js"></script>
+  <script src="http://unpkg.com/leaflet@1.3.1/dist/leaflet.js"></script>
+  <script src="js/leaflet-providers.js"></script>
+  <script src="js/leaflet.js"></script>
+  <link rel="stylesheet" href="style/styledLayerControl.css" />
+  <link href='http://fonts.googleapis.com/css?family=Lato:900,300' rel='stylesheet' type='text/css'>
+  <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+  <script src="js/styledLayerControl.js"></script>
+  <script src="js/Control.Coordinates.js"></script>
+  <script src="js/bundle.js"></script>
+  <script src="js/leaflet.browser.print.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.js"></script>
+  <script src="data/Fountains.js" type="text/javascript"> </script> 
+  <script src="data/Water_wheels.js" type="text/javascript"> </script> 
+  <script src="data/Waster_water_treatment.js"></script>
+  <script src="data/Lakes.js"></script>
+  <script src="data/water_reserviors.js"></script>
+  <script src="data/WaterWays.js"></script>
+
+</head>
+
+<body>
+  <div id="main">
+    <div id="header">
+      <div id="logo">
+        <div id="logo_text">
+          <!-- class="logo_colour", allows you to change the colour of the text -->
+          <h1><a href="index.html">Salzburg<span class="logo_colour">Interactive</span></a></h1>
+          <h2 class="ml2">Water Resource MAP</h2>
+        </div>
+      </div>
+      <div id="menubar">
+        <ul id="menu">
+          <li><a href="aboutmap.html"><h2><b>About Map</b></h2></a></li>
+        </ul>
+      </div> 
+    </div>
+    <div id="map"></div>
+    <script src="js/mainmap.js"></script>
+    <script>
+      window.print = function () {
+        return domtoimage
+            .toPng(document.querySelector(".grid-print-container"))
+            .then(function (dataUrl) {
+              var link = document.createElement('a');
+              link.download = map.printControl.options.documentTitle || "exportedMap" + '.png';
+              link.href = dataUrl;
+              link.click();
+            });
+      };
+    </script>
+</body>
+</html>

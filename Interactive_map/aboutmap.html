@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title>Water resource Map</title>
+  <meta name="description" content="website description" />
+  <meta name="keywords" content="website keywords, website keywords" />
+  <meta http-equiv="content-type" content="text/html; charset=windows-1252" />
+  <link rel="stylesheet" type="text/css" href="style/style.css" />
+</head>
+
+<body>
+  <div id="main">
+    <div id="header">
+      <div id="logo">
+        <div id="logo_text">
+          <!-- class="logo_colour", allows you to change the colour of the text -->
+          <h1><a href="index.html">Salzburg<span class="logo_colour">Interactive</span></a></h1>
+          <h2 class="ml2">Water Resource MAP</h2>
+        </div>
+      </div>
+      </div>
+    </div>
+    <div id="content_header"></div>
+    <div id="site_content">
+      <div id="sidebar_container">
+        <div class="sidebar">
+          <div class="sidebar_top"></div>
+          <div class="sidebar_item">
+            <h3>Useful Links</h3>
+            <ul>
+              <li><a href="https://leafletjs.com/reference-1.7.1.html">Leaflet</a></li>
+              <li><a href="https://leaflet-extras.github.io/leaflet-providers/preview/">Leaflet Basemap Providers</a></li>
+              <li><a href=https://leafletjs.com/reference-1.7.1.html#evented-method>Leaflet Event handling methods</a></li>
+              <li><a href="https://github.com/Igor-Vladyka/leaflet.browser.print">Leaflet Print map Plugin</a></li>
+              <li><a href="https://github.com/davicustodio/Leaflet.StyledLayerControl">Styled Layer Control Plugin</a></li>
+
+            </ul>
+          </div>
+          <div class="sidebar_base"></div>
+        </div>
+      </div>
+      <div id="content">
+        <!-- insert the page content here -->
+        <h1>Technologies used in Creating this Map</h1>
+        <p>This web map was created using Leaflet which is an an open-source JavaScript library
+for mobile-friendly interactive maps.This map shows water resources that are present in the city of Salzburg, Austria.</p>
+
+        <img src="style/images/Leaflet_logo.png" alt="Leaflet" width="250" height="150" class="center">
+
+        <h2>Data</h2>
+        <p>The data used in this map was downloaded from Open data Austria. A platform to collect, search, distribute and download open source data of Austria.Open data means that information is available in an open format and can be freely used, re-used and passed on by everyone for any purpose.Following datasets were downloaded and used as Feature layers in the web map</p>
+        <ul>
+          <li>Fountains(Point Features)</li>
+          <li>Waste Water Treatment Plant(Point Features)</li>
+          <li>Water Wheels(Point Features)</li>
+          <li>Water Ways(Line Features)</li>
+          <li>Lakes(Polygon Features)</li>
+        </ul>
+        <h1>Leaflet API's and Functions</h1>
+        <p>Leaflet provide API's , functions and plugins for making interactive and user friendly maps.Following are the different functionalities that are used in this map. </p>
+        <h2>Basemaps</h2>
+        <p>Leaflet-providers plugin allow loading different maps and provide functionality to tile , image layers and Ready-to-go basemaps, with little or no configuration at all.This plugin contains configurations for various free tile providers — OSM, OpenCycleMap, Stamen, Esri, etc.</p>
+        <h2>Layer Control <img src="style/images/layers-2x.png" alt="Leaflet" width="20" height="20"></h2>
+        <p>Leaflet has a nice little control that allows users to control which layers they see on map. The layers were grouped into two layer groups base layers and faeture layers. Base layer group contains three types of basemaps 1)Austria High dpi Basemap 2)Austria Orthophoto 3)OpenstreetMap.Feature layers group contains Overlay layers of Fountains, waster water treatment plant, water wheels, water ways and lakes. Due to large number of features in Fountains and Waste water treatment plant layers they were turned off by default and needs to be turned on by the user by checking these layers in the Layer control. </p>
+        <h2>Interactive Functions</h2>
+        <p>Leaflet provides event handling methods to make layers interactive.When user interacts with such layers like mouse click or mouseover different functions are performed.</p>
+        <h2>Following interactive functions and mouse events are used in creating this map</h2>
+        <ul>
+          <li><b>Highlight Feature</b></li>
+          <p>This function changes the color of the feature when it is hovered over by mouse. The highlight color can be defined to set color.</p>
+          <li><b>Reset Highlight</b></li>
+          <p>This function resets the color of the feature back to the original when mouse is moved away from the target feature.</p>
+          <li><b>ZoomToFeature</b></li>
+          <p>This function zooms to the target feature on different mouse event set in the function parameters.In this map when a lake feature is single clicked it zooms in to the the feature.</p>
+          <li><b>bindPopup</b></li>
+          <p>This function is used to just bind a popup to feature click and then open it.The popup can be customised like anyother html.Images are added in the popups of lake features.</p>
+          <li><b>bindTooltip</b></li>
+          <p>It is used  to display small texts on top of map layers. The text can be set to feature properties in the function options.</p>
+          <li><b>Map Print function</b></li>
+          <p>A third party Leaflet browser print plugin with custom print Layer and content was used to add print map control to the map layout.</p>
+          <li><b>Styled Layer Control</b></li>
+          <p>A Leaflet plugin that implements the management and control of layers by organization into categories or groups. The StyledLayerControl class extends the original L.control.layers control. The plugin uses HTML5 and CSS3 to style the presentation in a modern way. .</p>
+        </ul>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
