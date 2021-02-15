@@ -300,24 +300,38 @@
                     </div>
                   </div>
                   <div data-category="Geovisualization" class="reference-item col-lg-3 col-md-6">
-                    <div class="reference"><a href="#"><img src="img/water_resource.jpg" alt=""  width="250" height="150">
+                    <div class="reference"><a href="#"><img src="img/twitter.png" alt=""  width="250" height="150">
                         <div class="overlay">
                           <div class="inner">
                             <h3 class="h4 reference-title">Twitter Time Series Data Visualization</h3>
                             <p>Using GeoTools Java Library </p>
                           </div>
                         </div></a>
-                      <div data-images="img/thumbnail.png,img/leaflet.png" class="sr-only reference-description">
-                        <p>This map was build as to fulfill learning objective "interactive mapping" of Geoviualization and advanced cartography course.Leaflet is an open-source JavaScript library for creating interactive maps.This Leaflet map is fully interactive and include features such as:
+                      <div data-images="img/twitter.png" class="sr-only reference-description">
+                        <p>The objectives of the assignment was to establish WMS connection, request WMS image of user defined bounding box, store image locally into KML structure, display the stored image in google earth , visualize the tweets as a time series overlayed on the image. The code consist of three classes:
                           <ul>
-                            <li>Interactive panning/zooming</li>
-                            <li>Pop-up tooltips and labels</li>
-                            <li>Highlighting/selecting regions</li>
-                            <li>Styled Layer Control</li>
+                            <li><strong>WMS Connection:</strong> Establishes the connection with the WMS, assigns the intended parameters, send requests for WMS image and saves the image as a png file.</li>
+                            <li><strong>KMLConnection:</strong> Connects to the tweet database, retrieves the necessary information from it, generates the KML file, which embeddeds the image and the tweets in the same file, using groundOverlay, writes the KML string into a KML file and opens it in Google Earth.</li>
+                            <li><stronh>GoogleEarthTweetMapper:</stronh> Two lines of code calling the methods created in the previous classes. That is, we call the other two classes in the main class to implement it. This was done to ensure modularity of the code.</li>
                           </ul>
 
                           </p>
-                        <p class="buttons text-center"><a href="Interactive_map/Map.html" class="btn btn-outline-primary"><i class="fa fa-globe"></i> Visit website</a></p>
+                        <p class="buttons text-center"><a href="https://github.com/vibferreira/SWE_Final_Assigment" class="btn btn-outline-primary"><i class="fa fa-globe"></i> Visit website</a></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div data-category="Methods in Spatial Analysis" class="reference-item col-lg-3 col-md-6">
+                    <div class="reference"><a href="#"><img src="img/solar.png" alt=""  width="250" height="150">
+                        <div class="overlay">
+                          <div class="inner">
+                            <h3 class="h4 reference-title">Estimate Solar Power Potential</h3>
+                            <p>Using GeoTools Java Library </p>
+                          </div>
+                        </div></a>
+                      <div data-images="img/twitter.png" class="sr-only reference-description">
+                        <p>Determine how much electricity could be generated from solar power in a city neighborhood using ArcGIS Pro.
+                          </p>
+                        <p class="buttons text-center"><a href="https://arcg.is/1TSfOK" class="btn btn-outline-primary"><i class="fa fa-globe"></i> Visit website</a></p>
                       </div>
                     </div>
                   </div>
